@@ -21,7 +21,7 @@ class CreateRecepcionlibrosTable extends Migration
             $table->bigInteger('lib_id')->unsigned();
             $table->integer('cantidad');
             $table->timestamps();
-            $table->foreign('proveedor_id')->references('id')->on('_proveedores');
+            $table->foreign('proveedor_id')->references('id')->on('proveedores');
             $table->foreign('lib_id')->references('id')->on('libros');
         });
     }

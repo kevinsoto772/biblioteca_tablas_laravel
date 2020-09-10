@@ -23,11 +23,10 @@ class ProveedoresController extends Controller
         
         return DataTables::of(proveedores::select('id', 'nombre', 'direccion', 'telefono', 'user_id')->get())
             
-            ->addColumn('btn', 'proveedores.dataTable.btn')
+            ->addColumn('btn', 'proovedores.dataTable.btn')
             ->rawColumns(['btn'])
             ->toJson();
     }
-
 
     /**
      * Show the form for creating a new resource.

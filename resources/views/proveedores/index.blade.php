@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="table-responsive">
-      <table class="table align-items-center table-flush" id="table">
+        <table class="table align-items-center table-flush" id="table">
           <thead class="thead-light">
             <tr>
               <th scope="col">ID</th>
@@ -37,6 +37,8 @@
               <td></td>
               <td></td>
               <td></td>
+          
+              
             </tr>
           </tfoot>
         </table>
@@ -90,5 +92,6 @@
   });
   </script>
 @endsection
+
 
 

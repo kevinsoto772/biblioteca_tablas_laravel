@@ -25,4 +25,4 @@ Route::resource('editorial', 'EditorialController');
 Route::get('dataTableEditorial', 'EditorialController@dataTable')->name('dataTableEditorial');
 
 Route::resource('proveedores', 'ProveedoresController');
-Route::get('dataTableProveedores', 'ProveedoresController')->name('dataTableProveedores');
+Route::get('dataTableProveedores', 'ProveedoresController@dataTable')->name('dataTableProveedores');
