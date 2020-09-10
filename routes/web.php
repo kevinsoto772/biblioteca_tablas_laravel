@@ -26,3 +26,6 @@ Route::get('dataTableEditorial', 'EditorialController@dataTable')->name('dataTab
 
 Route::resource('proveedores', 'ProveedoresController');
 Route::get('dataTableProveedores', 'ProveedoresController@dataTable')->name('dataTableProveedores');
+
+Route::resource('libros', 'LibrosController');
+Route::get('dataTableLibros', 'LibrosController@dataTable')->name('dataTableLibros');

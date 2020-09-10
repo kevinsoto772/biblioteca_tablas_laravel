@@ -42,6 +42,12 @@
                 <span class="nav-link-text">Proveedores</span>
             </a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link {{(request()->segment(1)=='libros') ? 'active':'' }}" href="{{ route('libros.index') }}">
+                <i class="ni ni-single-02 text-orange"></i>
+                <span class="nav-link-text">Libros</span>
+            </a>
+        </li>
       
     </ul>
 </div>
