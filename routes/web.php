@@ -29,3 +29,6 @@ Route::get('dataTableProveedores', 'ProveedoresController@dataTable')->name('dat
 
 Route::resource('libros', 'LibrosController');
 Route::get('dataTableLibros', 'LibrosController@dataTable')->name('dataTableLibros');
+
+Route::resource('clientes', 'ClientesController'); 
+Route::get('dataTableClientes', 'ClientesController@dataTable')->name('dataTableClientes');
