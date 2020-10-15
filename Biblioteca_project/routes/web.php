@@ -40,3 +40,16 @@ Route::post(
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+
+Route::resource('clientes', App\Http\Controllers\clientesController::class);
+
+Route::resource('autors', App\Http\Controllers\autorController::class);
+
+Route::resource('editorials', App\Http\Controllers\editorialController::class);
+
+
+
+
