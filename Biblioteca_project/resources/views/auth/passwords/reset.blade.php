@@ -24,9 +24,9 @@
     <!-- iCheck -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/square/_all.css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+    <!-- //HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- //WARNING: Respond.js doesnt work if you view the page via file:// -->
+    <!--//[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
@@ -39,7 +39,7 @@
     </div>
 
     <!-- /.login-logo -->
-    <div class="login-box-body">
+    <div class="login-box-body" >
         <p class="login-box-msg">Reset your password</p>
 
         <form method="post" action="{{ url('/password/reset') }}">

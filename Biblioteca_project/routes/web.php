@@ -53,3 +53,16 @@ Route::resource('editorials', App\Http\Controllers\editorialController::class);
 
 
 
+
+
+Route::resource('libros', App\Http\Controllers\librosController::class);
+
+Route::resource('provedores', App\Http\Controllers\provedoresController::class);
+
+Route::resource('pais', App\Http\Controllers\paisController::class);
+
+Route::resource('estados', App\Http\Controllers\estadoController::class);
+
+Route::resource('tiposPrestamos', App\Http\Controllers\tipos_prestamoController::class);
+
+Route::resource('prestamos', App\Http\Controllers\prestamosController::class);

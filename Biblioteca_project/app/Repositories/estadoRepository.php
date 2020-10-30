@@ -2,28 +2,23 @@
 
 namespace App\Repositories;
 
-use App\Models\libros;
+use App\Models\estado;
 use App\Repositories\BaseRepository;
 
 /**
- * Class librosRepository
+ * Class estadoRepository
  * @package App\Repositories
- * @version October 22, 2020, 1:28 pm UTC
+ * @version October 30, 2020, 1:46 pm UTC
 */
 
-class librosRepository extends BaseRepository
+class estadoRepository extends BaseRepository
 {
     /**
      * @var array
      */
     protected $fieldSearchable = [
-        'ISBN',
-        'Titulo',
-        'fecha_lanzamiento',
-        'Idioma',
-        'Edicion',
-        'autor_id',
-        'editorial_id'
+        'estado_libro',
+        'libros_id'
     ];
 
     /**
@@ -41,6 +36,6 @@ class librosRepository extends BaseRepository
      **/
     public function model()
     {
-        return libros::class;
+        return estado::class;
     }
 }
