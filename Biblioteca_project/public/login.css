@@ -18,7 +18,7 @@
 div#deco{
     float: left;
     width: 350px;
-    height: 500px;
+    height: 550px;
     background-color:#ff5b5b;
     margin: 0px auto;
 
@@ -31,7 +31,7 @@ div#contenido{
     float: right;
     margin: 0px auto;
     width: 350px;
-    height: 500px;
+    height: 550px;
     background-color: white;
     padding: 60px;
 }
