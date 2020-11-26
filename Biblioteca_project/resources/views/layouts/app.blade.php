@@ -35,7 +35,8 @@
 
             <!-- Logo -->
             <a href="#" class="logo">
-           <b style="color:white">Biblioteca-Soft</b>
+           <b style="color:white">  <img src="{{asset('images/logo.png')}}"
+                                         class="img-circle" alt="User Image" width="35px"/> Biblioteca-Soft</b>
             </a>
 
             <!-- Header Navbar -->
@@ -52,7 +53,7 @@
                             <!-- Menu Toggle Button -->
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="background-color:#222D32">
                                 <!-- The user image in the navbar-->
-                                <img src="{{asset('images/k.png')}}"
+                                <img src="{{asset('images/usuario.png')}}"
                                      class="user-image" alt="User Image"/>
                                 <!-- hidden-xs hides the username on small devices so only the image appears. -->
                                 <span class="hidden-xs" style="color:white">{{ Auth::user()->name }}</span>
@@ -60,7 +61,7 @@
                             <ul class="dropdown-menu" style="background-color:#222D32">
                                 <!-- The user image in the menu -->
                                 <li class="user-header">
-                                    <img src="{{asset('images/k.png')}}"
+                                    <img src="{{asset('images/usuario.png')}}"
                                          class="img-circle" alt="User Image"/>
                                     <p>
                                         {{ Auth::user()->name }}

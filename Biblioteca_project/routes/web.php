@@ -73,19 +73,25 @@ Route::resource('prestamos', App\Http\Controllers\prestamosController::class);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/test', function (){
+Route::get('/Book',[App\Http\Controllers\bookController::class, 'index'])->name('Book');
 
-/*return permission::create([
-'name'=>'list book',
-'slug'=>'libros.index',
-'descripcion'=>'A user can list permissions',
 
-]);*/
-//$user =User::find(1);
-//$user->roles()->sync([1,2]);
-//return $user->roles;
 
-//$role =Role::find(2);
-//$role->permissions()->sync([1,2]);
-//return $role->permissions;
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

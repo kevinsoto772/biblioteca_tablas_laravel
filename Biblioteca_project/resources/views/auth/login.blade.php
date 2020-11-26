@@ -42,7 +42,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <a class="nav-link" href="/test">Libros</a>
+                            <a class="nav-link" href="/Book">Libros</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="/login">Registro/Login</a>
