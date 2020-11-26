@@ -6,28 +6,29 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="{{asset('images/k.png')}}" class="img-circle"
-                     alt="User Image"/>
+                <img src="{{asset('images/k.png')}}" class="img-circle" alt="User Image" />
             </div>
             <div class="pull-left info">
                 @if (Auth::guest())
                 <p>InfyOm</p>
                 @else
-                    <p>{{ Auth::user()->name}}</p>
+                <p style="color:white">{{ Auth::user()->name}}</p>
                 @endif
                 <!-- Status -->
-                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                <a href="#" style="color:white"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
         </div>
 
         <!-- search form (Optional) -->
         <form action="#" method="get" class="sidebar-form">
+        <div class="container-fluid">
             <div class="input-group">
-                <input type="text" name="q" class="form-control" placeholder="Search..."/>
-          <span class="input-group-btn">
-            <button type='submit' name='search' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i>
-            </button>
-          </span>
+                <input type="text" name="q" class="form-control" placeholder="Search..." />
+                <span class="input-group-btn">
+                    <button type='submit' name='search' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i>
+                    </button>
+                </span>
+            </div>
             </div>
         </form>
         <!-- Sidebar Menu -->

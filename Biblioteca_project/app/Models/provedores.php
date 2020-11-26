@@ -19,7 +19,7 @@ class provedores extends Model
 {
 
     public $table = 'provedores';
-    
+
 
 
 
@@ -49,14 +49,14 @@ class provedores extends Model
      * @var array
      */
     public static $rules = [
-        
+
     ];
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
      **/
-    public function libros()
+    public function Libros()
     {
-        return $this->hasMany(\App\Models\libros::class, 'id', 'libros_id');
+        return $this->hasOne(\App\Models\libros::class, 'id', 'libros_id');
     }
 }

@@ -9,6 +9,8 @@ use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
 use Response;
+use \App\Models\clientes;
+use \App\Models\tipos_prestamo;
 
 class prestamosController extends AppBaseController
 {
@@ -42,7 +44,9 @@ class prestamosController extends AppBaseController
      */
     public function create()
     {
-        return view('prestamos.create');
+        $cliente = clientes::all()->pluck('nombre', 'id');
+        $TipoPrestamo = tipos_prestamo::all()->pluck('Tipo_prestamo', 'id');
+        return view('prestamos.create')->with('Cliente', $cliente)->with('TipoPrestamo', $TipoPrestamo);
     }
 
     /**
@@ -92,6 +96,8 @@ class prestamosController extends AppBaseController
      */
     public function edit($id)
     {
+        $cliente = clientes::all()->pluck('nombre', 'id');
+        $TipoPrestamo = tipos_prestamo::all()->pluck('Tipo_prestamo', 'id');
         $prestamos = $this->prestamosRepository->find($id);
 
         if (empty($prestamos)) {
@@ -100,7 +106,7 @@ class prestamosController extends AppBaseController
             return redirect(route('prestamos.index'));
         }
 
-        return view('prestamos.edit')->with('prestamos', $prestamos);
+        return view('prestamos.edit')->with('prestamos', $prestamos)->with('Cliente', $cliente)->with('TipoPrestamo', $TipoPrestamo);
     }
 
     /**

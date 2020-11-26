@@ -9,7 +9,7 @@ use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
 use Response;
-
+use \App\Models\libros;
 class estadoController extends AppBaseController
 {
     /** @var  estadoRepository */
@@ -42,7 +42,8 @@ class estadoController extends AppBaseController
      */
     public function create()
     {
-        return view('estados.create');
+        $libro = libros::all()->pluck('Titulo', 'id');
+        return view('estados.create')->with('Libro', $libro);
     }
 
     /**
@@ -91,7 +92,7 @@ class estadoController extends AppBaseController
      * @return Response
      */
     public function edit($id)
-    {
+    {    $libro = libros::all()->pluck('Titulo', 'id');
         $estado = $this->estadoRepository->find($id);
 
         if (empty($estado)) {
@@ -100,7 +101,7 @@ class estadoController extends AppBaseController
             return redirect(route('estados.index'));
         }
 
-        return view('estados.edit')->with('estado', $estado);
+        return view('estados.edit')->with('estado', $estado)->with('Libro', $libro);
     }
 
     /**

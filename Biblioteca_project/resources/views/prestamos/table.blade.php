@@ -14,8 +14,8 @@
             <tr>
                 <td>{{ $prestamos->fecha_prestamo }}</td>
             <td>{{ $prestamos->Hora_prestamo }}</td>
-            <td>{{ $prestamos->clientes_id }}</td>
-            <td>{{ $prestamos->tipo_prestamoid }}</td>
+            <td>{{ $prestamos->Clientes->nombre }}</td>
+            <td>{{ $prestamos->TiposPrestamo->Tipo_prestamo }}</td>
                 <td>
                     {!! Form::open(['route' => ['prestamos.destroy', $prestamos->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

@@ -23,7 +23,7 @@ class libros extends Model
 {
 
     public $table = 'libros';
-    
+
 
 
 
@@ -59,22 +59,22 @@ class libros extends Model
      * @var array
      */
     public static $rules = [
-        
+
     ];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      **/
-    public function autor()
+    public function Autor()
     {
-        return $this->hasOne(\App\Models\autor::class, 'id', 'id_autor');
+        return $this->hasOne(\App\Models\autor::class, 'id', 'autor_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      **/
-    public function editorial()
+    public function Editorial()
     {
-        return $this->hasOne(\App\Models\editorial::class, 'id', 'id_editorial');
+        return $this->hasOne(\App\Models\editorial::class, 'id', 'editorial_id');
     }
 }

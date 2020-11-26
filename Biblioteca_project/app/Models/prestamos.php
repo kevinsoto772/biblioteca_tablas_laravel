@@ -20,7 +20,7 @@ class prestamos extends Model
 {
 
     public $table = 'prestamos';
-    
+
 
 
 
@@ -50,13 +50,13 @@ class prestamos extends Model
      * @var array
      */
     public static $rules = [
-        
+
     ];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      **/
-    public function clientes()
+    public function Clientes()
     {
         return $this->hasOne(\App\Models\clientes::class, 'id', 'clientes_id');
     }
@@ -64,7 +64,7 @@ class prestamos extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      **/
-    public function tiposPrestamo()
+    public function TiposPrestamo()
     {
         return $this->hasOne(\App\Models\tipos_prestamo::class, 'id', 'tipo_prestamoid');
     }

@@ -15,7 +15,7 @@
                 <td>{{ $provedores->nombre }}</td>
             <td>{{ $provedores->direccion }}</td>
             <td>{{ $provedores->telefono }}</td>
-            <td>{{ $provedores->libros_id }}</td>
+            <td>{{ $provedores->Libros->Titulo}}</td>
                 <td>
                     {!! Form::open(['route' => ['provedores.destroy', $provedores->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

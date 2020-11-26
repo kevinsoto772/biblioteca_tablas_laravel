@@ -44,9 +44,9 @@ class librosController extends AppBaseController
      */
     public function create()
     {
-        $autor = autor::all()->pluck('nombre','id');
-        $editorial = editorial::all()->pluck('nombre','id');
-        return view('libros.create')-> with('autor',$autor)-> with('editorial',$editorial);
+        $autor = autor::all()->pluck('nombre', 'id');
+        $editorial = editorial::all()->pluck('nombre', 'id');
+        return view('libros.create')->with('Autor', $autor)->with('Editorial', $editorial);
     }
 
     /**
@@ -96,6 +96,8 @@ class librosController extends AppBaseController
      */
     public function edit($id)
     {
+        $autor = autor::all()->pluck('nombre', 'id');
+        $editorial = editorial::all()->pluck('nombre', 'id');
         $libros = $this->librosRepository->find($id);
 
         if (empty($libros)) {
@@ -104,7 +106,7 @@ class librosController extends AppBaseController
             return redirect(route('libros.index'));
         }
 
-        return view('libros.edit')->with('libros', $libros);
+        return view('libros.edit')->with('libros', $libros)->with('Autor', $autor)->with('Editorial', $editorial);
     }
 
     /**

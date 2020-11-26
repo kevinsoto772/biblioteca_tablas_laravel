@@ -1,0 +1,43 @@
+.navbar{
+    background-color:white;
+    height: 70px;
+}
+.login-box{
+    width: 700px;
+}
+.login-box-body{
+    background-color: #003153;
+
+
+}
+#body{
+    background-image:url(../images/222.jpg);
+
+}
+/**/
+div#deco{
+    float: left;
+    width: 350px;
+    height: 500px;
+    background-color:#ff5b5b;
+    margin: 0px auto;
+
+
+
+}
+
+
+div#contenido{
+    float: right;
+    margin: 0px auto;
+    width: 350px;
+    height: 500px;
+    background-color: white;
+    padding: 60px;
+}
+
+#email{
+    background: none;
+    border:none;
+    border-bottom: 2px solid #c7c7c7;
+}

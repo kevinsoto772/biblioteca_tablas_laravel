@@ -14,12 +14,15 @@
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "infyomlabs/adminlte-templates": "8.0.x-dev",
+        "infyomlabs/generator-builder": "dev-master",
         "infyomlabs/laravel-generator": "8.0.x-dev",
+        "intervention/image": "^2.5",
+        "laravel/cashier": "^12.5",
         "laravel/framework": "^8.0",
+        "laravel/socialite": "^5.1",
         "laravel/tinker": "^2.0",
-        "laravel/ui": "3.0",
-        "laravelcollective/html": "^6.2",
-        "infyomlabs/generator-builder": "dev-master"
+        "laravel/ui": "^3.1",
+        "laravelcollective/html": "^6.2"
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",

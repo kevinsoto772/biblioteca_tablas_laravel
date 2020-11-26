@@ -9,7 +9,7 @@ use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
 use Response;
-
+use \App\Models\libros;
 class provedoresController extends AppBaseController
 {
     /** @var  provedoresRepository */
@@ -42,7 +42,8 @@ class provedoresController extends AppBaseController
      */
     public function create()
     {
-        return view('provedores.create');
+        $libro = libros::all()->pluck('Titulo', 'id');
+        return view('provedores.create')->with('Libro', $libro);
     }
 
     /**
@@ -92,6 +93,7 @@ class provedoresController extends AppBaseController
      */
     public function edit($id)
     {
+        $libro = libros::all()->pluck('Titulo', 'id');
         $provedores = $this->provedoresRepository->find($id);
 
         if (empty($provedores)) {
@@ -100,7 +102,7 @@ class provedoresController extends AppBaseController
             return redirect(route('provedores.index'));
         }
 
-        return view('provedores.edit')->with('provedores', $provedores);
+        return view('provedores.edit')->with('provedores', $provedores)->with('Libro', $libro);
     }
 
     /**

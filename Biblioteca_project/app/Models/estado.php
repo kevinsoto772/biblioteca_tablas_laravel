@@ -17,7 +17,7 @@ class estado extends Model
 {
 
     public $table = 'estado';
-    
+
 
 
 
@@ -43,13 +43,13 @@ class estado extends Model
      * @var array
      */
     public static $rules = [
-        
+
     ];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      **/
-    public function libros()
+    public function Libros()
     {
         return $this->hasOne(\App\Models\libros::class, 'id', 'libros_id');
     }

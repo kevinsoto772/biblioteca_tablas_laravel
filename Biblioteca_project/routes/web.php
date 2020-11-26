@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use \App\Models\User;
+use \App\Models\Role;
+use \App\Models\permission;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,8 +14,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
+    return view('welcome');
+});
+Route::get('/welcome', function () {
     return view('welcome');
 });
 
@@ -66,3 +70,22 @@ Route::resource('estados', App\Http\Controllers\estadoController::class);
 Route::resource('tiposPrestamos', App\Http\Controllers\tipos_prestamoController::class);
 
 Route::resource('prestamos', App\Http\Controllers\prestamosController::class);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/test', function (){
+
+/*return permission::create([
+'name'=>'list book',
+'slug'=>'libros.index',
+'descripcion'=>'A user can list permissions',
+
+]);*/
+//$user =User::find(1);
+//$user->roles()->sync([1,2]);
+//return $user->roles;
+
+//$role =Role::find(2);
+//$role->permissions()->sync([1,2]);
+//return $role->permissions;
+});

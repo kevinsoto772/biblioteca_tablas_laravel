@@ -20,8 +20,8 @@
             <td>{{ $libros->fecha_lanzamiento }}</td>
             <td>{{ $libros->Idioma }}</td>
             <td>{{ $libros->Edicion }}</td>
-            <td>{{ $libros->autor}}</td>
-            <td>{{ $libros->editorial}}</td>
+            <td>{{ $libros->Autor->nombre}}</td>
+            <td>{{ $libros->Editorial->nombre}}</td>
                 <td>
                     {!! Form::open(['route' => ['libros.destroy', $libros->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

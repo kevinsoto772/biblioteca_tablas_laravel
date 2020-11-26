@@ -40,4 +40,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+//es: Desde aqui
+    public function roles(){
+        return $this->belongsToMany('\App\Models\Role')->withTimestamps();
+    }
 }

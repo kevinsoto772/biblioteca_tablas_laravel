@@ -13,13 +13,13 @@
 <!-- Clientes Id Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('clientes_id', 'Clientes Id:') !!}
-    {!! Form::text('clientes_id', null, ['class' => 'form-control']) !!}
+    {!! Form::select('clientes_id',$Cliente,null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Tipo Prestamoid Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('tipo_prestamoid', 'Tipo Prestamoid:') !!}
-    {!! Form::text('tipo_prestamoid', null, ['class' => 'form-control']) !!}
+    {!! Form::select('tipo_prestamoid',$TipoPrestamo, null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Submit Field -->

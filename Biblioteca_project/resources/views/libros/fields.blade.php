@@ -31,13 +31,13 @@
 <!-- Autor Id Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('autor_id', 'Autor Id:') !!}
-    {!! Form::select('autor_id',$autor, null, ['class' => 'form-control']) !!}
+    {!! Form::select('autor_id',$Autor,null,['class' => 'form-control']) !!}
 </div>
 
 <!-- Editorial Id Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('editorial_id', 'Editorial Id:') !!}
-    {!! Form::select('editorial_id',$editorial ,null, ['class' => 'form-control']) !!}
+    {!! Form::select('editorial_id',$Editorial,null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Submit Field -->
